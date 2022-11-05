@@ -1,6 +1,6 @@
 import { useState, Fragment, useEffect } from "react";
 import "react-modal-video/css/modal-video.min.css";
-import dubai from "../videos/dubai.mp4";
+import present from "../videos/present.mp4";
 import { IoCloseOutline } from "react-icons/io5";
 import { BiLoaderAlt } from "react-icons/bi";
 import { AiFillVideoCamera } from "react-icons/ai";
@@ -141,7 +141,7 @@ const Home = () => {
                           autoPlay
                           loop
                         >
-                          <source src={dubai} type="video/mp4" />
+                          <source src={present} type="video/mp4" />
                         </video>
                       </div>
                     </div>
