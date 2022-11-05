@@ -1,6 +1,5 @@
 import { useState, Fragment, useEffect } from "react";
 import "react-modal-video/css/modal-video.min.css";
-import dubai from "../videos/dubai.mp4";
 import { IoCloseOutline } from "react-icons/io5";
 import { BiLoaderAlt } from "react-icons/bi";
 import { AiFillVideoCamera } from "react-icons/ai";
