@@ -150,7 +150,7 @@ const Header = () => {
             <li className="hover:text-black transition-all ease-linear duration-200">
               <Link
                 className="block w-full h-full px-2 xl:px-4 py-[20px]"
-                to="/برند"
+                to="/brands"
               >
                 برندها
               </Link>

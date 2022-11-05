@@ -223,7 +223,7 @@ const MenuModal = ({ modalOpen, handleClose }) => {
           <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
             <Link
               className="flex items-center py-3"
-              to="برند"
+              to="/brands"
               onClick={handleClose}
             >
               <span className="ml-4">برند ها</span>

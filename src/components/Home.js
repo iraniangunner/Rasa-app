@@ -5,14 +5,12 @@ import { IoCloseOutline } from "react-icons/io5";
 import { BiLoaderAlt } from "react-icons/bi";
 import { AiFillVideoCamera } from "react-icons/ai";
 import nancy from "../images/nancy.png";
-import oghabHalva from "../images/oghab-halva.png";
 import rojin from "../images/rojin.png";
 import viatana from "../images/viatana.png";
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import barbican from "../images/barbican.png";
-import teno from "../images/teno.png";
 import pakhsh from "../videos/pakhsh.mp4";
 
 const Home = () => {
@@ -79,72 +77,6 @@ const Home = () => {
   }, [modal]);
   return (
     <>
-      {/* <div className="w-full lg:w-[80%] mx-auto mt-10 lg:mt-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="flex items-center">
-            <div className="p-4">
-              <h1 className="font-[500] text-[22px] lg:text-[35px] mb-8">
-                مدیریت علمی در فروش و پخش محصولات غذایی شوینده و بهداشتی
-              </h1>
-              <p className="text-[19px] text-justify">
-                شرکت پخش عقاب یکی از شرکت‌های پیشرو در زمینه فروش و پخش مویرگی
-                کالاهای مصرفی در ایران است. طرح کسب و کار پخش عقاب بگونه‌ای
-                طراحی شده است که سرعت، اطمینان و رضایت را برای مشتریان خود به
-                ارمغان می آورد. پخش عقاب با پیاده سازی سیستم مدیریت استراتژیک در
-                تئوری و عمل به کلیه ذینفعان و مشتریان اجازه می دهد که فرصتها را
-                به ارزش و مزیت پایدار تبدیل کنند.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex items-center justify-center py-8 mt-16">
-          <button
-            onClick={openModal}
-            className={`flex items-center ${
-              modal && "cursor-default"
-            } p-4 bg-blue-500 rounded-md text-white hover:text-black hover:bg-gray-200 transition-all`}
-          >
-            <span className="ml-2">پخش عقاب چگونه کار می کند؟</span>
-            <AiFillVideoCamera />
-            {modal ? (
-              <section className="modal__bg">
-                <div className="modal__align">
-                  <div className="modal__content" modal={modal}>
-                    <IoCloseOutline
-                      className="modal__close"
-                      arial-label="Close modal"
-                      onClick={setModal}
-                    />
-                    <div className="modal__video-align">
-                      {videoLoading ? (
-                        <div className="modal__spinner">
-                          <BiLoaderAlt
-                            className="modal__spinner-style"
-                            fadeIn="none"
-                          />
-                        </div>
-                      ) : null}
-                      <video
-                        className="modal__video-style"
-                        onLoad={spinner}
-                        loading="lazy"
-                        width="800"
-                        height="500"
-                        controls
-                        autoPlay
-                        loop
-                      >
-                        <source src={dubai} type="video/mp4" />
-                      </video>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            ) : null}
-          </button>
-        </div>
-      </div> */}
       <div className="h-[100vh]">
         <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.4)]"></div>
         <video
@@ -156,21 +88,20 @@ const Home = () => {
         />
         <div className="absolute w-full h-full top-0 flex flex-col justify-center">
           <div className="px-4 py-2 w-full lg:w-[80%] mx-auto mt-10 lg:mt-16 text-white">
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2">
               <div className="mt-20">
-              <h1 className="font-[500] text-[16px] sm:text-[22px] xl:text-[35px] mb-2 md:mb-8">
-                مدیریت علمی در فروش و پخش محصولات غذایی شوینده و بهداشتی
-              </h1>
-              <p className="text-[14px] sm:text-[19px] text-justify ">
-                شرکت پخش عقاب یکی از شرکت‌های پیشرو در زمینه فروش و پخش مویرگی
-                کالاهای مصرفی در ایران است. طرح کسب و کار پخش عقاب بگونه‌ای
-                طراحی شده است که سرعت، اطمینان و رضایت را برای مشتریان خود به
-                ارمغان می آورد. پخش عقاب با پیاده سازی سیستم مدیریت استراتژیک در
-                تئوری و عمل به کلیه ذینفعان و مشتریان اجازه می دهد که فرصتها را
-                به ارزش و مزیت پایدار تبدیل کنند.
-              </p>
+                <h1 className="font-[500] text-[16px] sm:text-[22px] xl:text-[35px] mb-2 md:mb-8">
+                  مدیریت علمی در فروش و پخش محصولات غذایی شوینده و بهداشتی
+                </h1>
+                <p className="text-[14px] sm:text-[19px] text-justify ">
+                  شرکت پخش عقاب یکی از شرکت‌های پیشرو در زمینه فروش و پخش مویرگی
+                  کالاهای مصرفی در ایران است. طرح کسب و کار پخش عقاب بگونه‌ای
+                  طراحی شده است که سرعت، اطمینان و رضایت را برای مشتریان خود به
+                  ارمغان می آورد. پخش عقاب با پیاده سازی سیستم مدیریت استراتژیک
+                  در تئوری و عمل به کلیه ذینفعان و مشتریان اجازه می دهد که
+                  فرصتها را به ارزش و مزیت پایدار تبدیل کنند.
+                </p>
               </div>
-           
             </div>
           </div>
           <div className="flex items-center justify-center pb-6 my-4">
@@ -255,7 +186,7 @@ const Home = () => {
         </Carousel>
         <div className="flex justify-center items-center mt-8">
           <Link
-            to="/برند"
+            to="/brands"
             className="p-4 bg-blue-500 rounded-md text-white hover:text-black hover:bg-gray-200"
           >
             مشاهده سایر برند ها
