@@ -78,7 +78,7 @@
   }
 }
 
-/* @keyframes blink {
+@keyframes blink {
   0% {
     opacity: 0;
   }
@@ -88,9 +88,9 @@
   100% {
     opacity: 0;
   }
-} */
+}
 
-/* .flasher {
+.flasher {
   animation: blink 1s infinite;
   width: 8px;
   height: 8px;
@@ -98,7 +98,7 @@
   margin-left: 8px;
   margin-top: 5px;
   background-color: #32cd32;
-} */
+}
 
 @keyframes jumpInfinite {
   0% {

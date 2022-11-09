@@ -3,7 +3,7 @@ import "react-modal-video/css/modal-video.min.css";
 import { IoCloseOutline } from "react-icons/io5";
 import { BiLoaderAlt } from "react-icons/bi";
 import { AiFillVideoCamera } from "react-icons/ai";
-import {TbArrowBigUpLines} from "react-icons/tb";
+import { TbArrowBigUpLines } from "react-icons/tb";
 import nancy from "../images/nancy.png";
 import rojin from "../images/rojin.png";
 import viatana from "../images/viatana.png";
@@ -83,10 +83,8 @@ const Home = () => {
   //   };
   // }, [videoModal]);
 
-
   return (
     <>
-     
       <div className="p-4 w-full lg:w-[80%] mx-auto my-10 lg:my-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
@@ -104,7 +102,6 @@ const Home = () => {
           </div>
           <div className="flex justify-center items-center order-first lg:order-last">
             <div>
-             
               <video
                 className="rounded-[20px]"
                 // onLoad={spinner}
@@ -119,15 +116,18 @@ const Home = () => {
                   type="video/mp4"
                 />
               </video>
-               <div className="mt-6 flex flex-col justify-center items-center">
-                <TbArrowBigUpLines className="arrow" size={35}/>
-                <p className="mt-2">پخش عقاب چگونه کار می کند؟</p>
+              <div className="mt-6 flex flex-col justify-center items-center">
+                <TbArrowBigUpLines className="arrow" size={35} />
+                <div className="flex items-center">
+                  <div className="flasher mt-2"></div>
+                  <p>پخش عقاب چگونه کار می کند؟</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-     
+
       <div className="w-full lg:w-[90%] mx-auto">
         <h1 className="flex justify-center items-center text-[22px] my-10">
           شرکای تجاری پخش عقاب
