@@ -55,7 +55,7 @@ const Header = () => {
   }, [isMenuOpen, isSearchOpen]);
 
   return (
-    <header className={`${pathname === "/" && "absolute top-0 z-10 w-full"}`}>
+    <header>
       <nav className="w-full flex items-center justify-between lg:justify-center py-4 px-3">
         <div className="flex justify-center items-center rounded-md mr-0 lg:hidden">
           <button type="button" onClick={openMenu}>

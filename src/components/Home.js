@@ -3,27 +3,35 @@ import "react-modal-video/css/modal-video.min.css";
 import { IoCloseOutline } from "react-icons/io5";
 import { BiLoaderAlt } from "react-icons/bi";
 import { AiFillVideoCamera } from "react-icons/ai";
+import {TbArrowBigUpLines} from "react-icons/tb";
 import nancy from "../images/nancy.png";
 import rojin from "../images/rojin.png";
 import viatana from "../images/viatana.png";
 import { Link } from "react-router-dom";
+import present from "../videos/pakhsh.mp4";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import barbican from "../images/barbican.png";
 import pakhsh from "../videos/pakhsh.mp4";
+import { AnimatePresence } from "framer-motion";
+import ModalVideo from "react-modal-video";
 
 const Home = () => {
-  const [modal, setModal] = useState(false);
-  const [videoLoading, setVideoLoading] = useState(true);
-  const [browserWidth, setBrowserWidth] = useState(0);
+  // const [videoModal, setVideoModal] = useState(false);
+  // const [videoLoading, setVideoLoading] = useState(true);
+  // const [browserWidth, setBrowserWidth] = useState(0);
 
-  const openModal = () => {
-    setModal(!modal);
-  };
+  // const openVideoModal = () => {
+  //   setVideoModal(true);
+  // };
 
-  const spinner = () => {
-    setVideoLoading(!videoLoading);
-  };
+  // const closeVideoModal = () => {
+  //   setVideoModal(false);
+  // };
+
+  // const spinner = () => {
+  //   setVideoLoading(!videoLoading);
+  // };
 
   const responsive = {
     superLargeDesktop: {
@@ -44,116 +52,84 @@ const Home = () => {
     },
   };
 
-  useEffect(() => {
-    if (browserWidth >= 992) {
-      setModal(false);
-      document.body.style.overflow = "unset";
-    }
-  }, [browserWidth]);
+  // useEffect(() => {
+  //   if (browserWidth >= 992) {
+  //     // setVideoModal(false);
+  //     document.body.style.overflow = "visible";
+  //   }
+  // }, [browserWidth]);
 
-  useEffect(() => {
-    function handleResize() {
-      setBrowserWidth(window.innerWidth);
-    }
+  // useEffect(() => {
+  //   function handleResize() {
+  //     setBrowserWidth(window.innerWidth);
+  //   }
 
-    window.addEventListener("resize", handleResize);
+  //   window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
-  useEffect(() => {
-    if (modal) {
-      document.documentElement.style.overflow = "hidden";
-    } else {
-      document.documentElement.style.overflow = "unset";
-    }
+  // useEffect(() => {
+  //   if (videoModal) {
+  //     document.documentElement.style.overflow = "hidden";
+  //   } else {
+  //     document.documentElement.style.overflow = "visible";
+  //   }
 
-    return () => {
-      document.documentElement.style.overflow = "unset";
-    };
-  }, [modal]);
+  //   return () => {
+  //     document.documentElement.style.overflow = "visible";
+  //   };
+  // }, [videoModal]);
+
+
   return (
     <>
-      <div className="h-[100vh]">
-        <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,.4)]"></div>
-        <video
-          src={pakhsh}
-          autoPlay
-          loop
-          muted
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute w-full h-full top-0 flex flex-col justify-center">
-          <div className="px-4 py-2 w-full lg:w-[80%] mx-auto mt-10 lg:mt-16 text-white">
-            <div className="grid grid-cols-1 sm:grid-cols-2">
-              <div className="mt-20">
-                <h1 className="font-[500] text-[16px] sm:text-[22px] xl:text-[35px] mb-2 md:mb-8">
-                  مدیریت علمی در فروش و پخش محصولات غذایی شوینده و بهداشتی
-                </h1>
-                <p className="text-[14px] sm:text-[19px] text-justify ">
-                  شرکت پخش عقاب یکی از شرکت‌های پیشرو در زمینه فروش و پخش مویرگی
-                  کالاهای مصرفی در ایران است. طرح کسب و کار پخش عقاب بگونه‌ای
-                  طراحی شده است که سرعت، اطمینان و رضایت را برای مشتریان خود به
-                  ارمغان می آورد. پخش عقاب با پیاده سازی سیستم مدیریت استراتژیک
-                  در تئوری و عمل به کلیه ذینفعان و مشتریان اجازه می دهد که
-                  فرصتها را به ارزش و مزیت پایدار تبدیل کنند.
-                </p>
+     
+      <div className="p-4 w-full lg:w-[80%] mx-auto my-10 lg:my-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div>
+            <h1 className="font-[500] text-[16px] p-4 lg:mt-[-40px] sm:text-[22px] xl:text-[35px]">
+              مدیریت علمی در فروش و پخش محصولات غذایی شوینده و بهداشتی
+            </h1>
+            <p className="text-[14px] sm:text-[19px] text-justify p-4">
+              شرکت پخش عقاب یکی از شرکت‌های پیشرو در زمینه فروش و پخش مویرگی
+              کالاهای مصرفی در ایران است. طرح کسب و کار پخش عقاب بگونه‌ای طراحی
+              شده است که سرعت، اطمینان و رضایت را برای مشتریان خود به ارمغان می
+              آورد. پخش عقاب با پیاده سازی سیستم مدیریت استراتژیک در تئوری و عمل
+              به کلیه ذینفعان و مشتریان اجازه می دهد که فرصتها را به ارزش و مزیت
+              پایدار تبدیل کنند.
+            </p>
+          </div>
+          <div className="flex justify-center items-center order-first lg:order-last">
+            <div>
+             
+              <video
+                className="rounded-[20px]"
+                // onLoad={spinner}
+                loading="lazy"
+                width="800"
+                height="500"
+                controls
+              >
+                <source
+                  // src="http://pakhshoghab.com/wp-content/uploads/2018/03/Paksh-Oghab-StopMotion.mp4"
+                  src={present}
+                  type="video/mp4"
+                />
+              </video>
+               <div className="mt-6 flex flex-col justify-center items-center">
+                <TbArrowBigUpLines className="arrow" size={35}/>
+                <p className="mt-2">پخش عقاب چگونه کار می کند؟</p>
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center pb-6 my-4">
-            <button
-              onClick={openModal}
-              className={`flex items-center ${
-                modal && "cursor-default"
-              } p-4 bg-transparent border border-solid rounded-md text-white hover:text-black hover:bg-white transition-all`}
-            >
-              <span className="ml-2">پخش عقاب چگونه کار می کند؟</span>
-              <AiFillVideoCamera />
-              {modal ? (
-                <section className="modal__bg">
-                  <div className="modal__align">
-                    <div className="modal__content" modal={modal}>
-                      <IoCloseOutline
-                        className="modal__close"
-                        arial-label="Close modal"
-                        onClick={setModal}
-                      />
-                      <div className="modal__video-align">
-                        {videoLoading ? (
-                          <div className="modal__spinner">
-                            <BiLoaderAlt
-                              className="modal__spinner-style"
-                              fadeIn="none"
-                            />
-                          </div>
-                        ) : null}
-                        <video
-                          className="modal__video-style"
-                          onLoad={spinner}
-                          loading="lazy"
-                          width="800"
-                          height="500"
-                          controls
-                          autoPlay
-                          loop
-                        >
-                          <source src="http://pakhshoghab.com/wp-content/uploads/2018/03/Paksh-Oghab-StopMotion.mp4" type="video/mp4" />
-                        </video>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              ) : null}
-            </button>
-          </div>
         </div>
       </div>
-
-      <div className="w-full lg:w-[90%] mx-auto mt-10 lg:mt-16">
-        <h1 className="flex justify-center items-center text-[22px] my-10 lg:mt-24">
+     
+      <div className="w-full lg:w-[90%] mx-auto">
+        <h1 className="flex justify-center items-center text-[22px] my-10">
           شرکای تجاری پخش عقاب
         </h1>
         <Carousel responsive={responsive} autoPlay={true} infinite={true}>
