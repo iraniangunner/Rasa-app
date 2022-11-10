@@ -111,7 +111,7 @@ const Brands = () => {
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space">
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <p>
+                  <p className="text-justify text-[14px] text-[#626262]">
                     شرکت پخش عقاب از بدو تأسیس، همواره سعی بر آن داشته تا با
                     رویکردی کاملا علمی کلیه خدمات خود را به مشتریان ارائه دهد و
                     از این طریق به عنوان شرکتی پیشتاز و مدرن در صنعت پخش و توزیع
@@ -122,7 +122,7 @@ const Brands = () => {
                   </p>
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  <p>
+                  <p className="text-justify text-[14px] text-[#626262]">
                     شوینده‌ها ازجمله محصولاتی هستند که در سبد خرید هر خانواده
                     ایرانی جای دارند، چراکه امروزه سطح آگاهی عمومی نسبت به نقش
                     شویندها در پیشگیری از بروز بیماری‌ها به‌واسطه برطرف کردن
@@ -136,7 +136,7 @@ const Brands = () => {
                   </p>
                 </div>
                 <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                  <p>
+                  <p className="text-justify text-[14px] text-[#626262]">
                     صنایع سلولزی و بهداشتی یکی از مهم‌ترین صنایع ایران محسوب
                     می‌شود؛ جمعیت 80 میلیونی ایران و استفاده تمامی اقشار جامعه
                     در همه مقاطع سنی، بازار بسیار بزرگی برای تولیدکنندگان داخل و
@@ -187,7 +187,7 @@ const Brands = () => {
                   </p>
                 </div>
                 <div className={openTab === 4 ? "block" : "hidden"} id="link4">
-                  <p>
+                  <p className="text-justify text-[14px] text-[#626262]">
                     داشتن رژیم غذایی سالم از ارکان اساسی سلامتی است که نیازمند
                     مواد اولیه تازه و باکیفیت است. در این میان با توجه به وسعت و
                     جمعیت بالای کلان‌شهرها، توزیع و پخش مواد غذایی با سرعت‌بالا،
@@ -198,7 +198,7 @@ const Brands = () => {
                   </p>
                 </div>
                 <div className={openTab === 5 ? "block" : "hidden"} id="link5">
-                  <p>
+                  <p className="text-justify text-[14px] text-[#626262]">
                     محصولات آرایشی و بهداشتی به عنوان زیرمجموعه‌ای پرمصرف از
                     محصولات FMCG و کالاهای مصرفی مارک‌دار هستند که در کسب‌وکار
                     سالن‌های آرایشی و زیبایی تقاضای زیادی دارند. قابل‌توجه است
