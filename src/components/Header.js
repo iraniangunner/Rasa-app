@@ -14,7 +14,6 @@ const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [browserWidth, setBrowserWidth] = useState(0);
 
-  const {pathname} = useLocation();
 
   const closeSearch = () => setIsSearchOpen(false);
   const openSearch = () => setIsSearchOpen(true);
@@ -26,7 +25,7 @@ const Header = () => {
     if (browserWidth >= 992) {
       setIsMenuOpen(false);
       setIsSearchOpen(false);
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "visible";
     }
   }, [browserWidth]);
 
@@ -46,11 +45,11 @@ const Header = () => {
     if (isMenuOpen || isSearchOpen) {
       document.documentElement.style.overflow = "hidden";
     } else {
-      document.documentElement.style.overflow = "unset";
+      document.documentElement.style.overflow = "visible";
     }
 
     return () => {
-      document.documentElement.style.overflow = "unset";
+      document.documentElement.style.overflow = "visible";
     };
   }, [isMenuOpen, isSearchOpen]);
 
