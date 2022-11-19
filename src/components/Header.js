@@ -1,5 +1,5 @@
 import { useState, useEffect, Fragment } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { GoSearch } from "react-icons/go";
 import { GiHamburgerMenu } from "react-icons/gi";
 import logo from "../images/logo-pakhshoghab.png";
@@ -13,7 +13,6 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [browserWidth, setBrowserWidth] = useState(0);
-
 
   const closeSearch = () => setIsSearchOpen(false);
   const openSearch = () => setIsSearchOpen(true);
@@ -79,7 +78,6 @@ const Header = () => {
                 صفحه اصلی
               </Link>
             </li>
-
             <Menu
               as="li"
               className="relative inline-block text-left hover:text-black transition-all ease-linear duration-200"

@@ -116,7 +116,7 @@ const Home = () => {
         </div>
       </div>
       <div className="w-full lg:w-[80%] mx-auto mt-10 lg:mt-16">
-        <h1 className="flex justify-center items-center text-[22px] my-10">
+        <h1 className="flex justify-center items-center text-[22px] my-20 mb-10">
           آخرین اخبار و رویدادهای ما
         </h1>
         <NewsSlider />

@@ -53,6 +53,10 @@ const NewsSlider = () => {
       >
         <SwiperSlide>
           <img src={first} />
+          <div className="absolute w-full h-[40%] bottom-0 left-0 right-0 px-4 py-2 text-right text-white">
+           <p>1400/2/5</p>
+           <p>مراسم تقدیر از آقای ابهری</p>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={first} />
