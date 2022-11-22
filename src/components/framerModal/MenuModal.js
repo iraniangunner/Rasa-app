@@ -91,26 +91,26 @@ const MenuModal = ({ modalOpen, handleClose }) => {
                 onClick={() => handleOpen(1)}
                 className="text-gray-400 hover:text-black transition-colors ease-linear duration-200 "
               >
-                درباره ما
+                محصولات
               </AccordionHeader>
               <AccordionBody>
                 <ul>
                   <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
                     <Link
                       className="flex items-center p-2"
-                      to="/درباره-پخش-عقاب"
+                      to="/صنایع-غذایی"
                       onClick={handleClose}
                     >
-                      <span className="ml-4">درباره پخش عقاب</span>
+                      <span className="ml-4">صنایع غذایی</span>
                     </Link>
                   </li>
                   <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
                     <Link
                       className="flex items-center p-2"
-                      to="/چارت-سازمانی"
+                      to="/سلولزی-بهداشتی"
                       onClick={handleClose}
                     >
-                      <span className="ml-4">چارت سازمانی</span>
+                      <span className="ml-4">سلولزی بهداشتی</span>
                     </Link>
                   </li>
                 </ul>
@@ -124,35 +124,26 @@ const MenuModal = ({ modalOpen, handleClose }) => {
                 onClick={() => handleOpen(3)}
                 className="text-gray-400 hover:text-black transition-colors ease-linear duration-200"
               >
-                تماس با ما
+                برند های تجاری
               </AccordionHeader>
               <AccordionBody>
                 <ul>
                   <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
                     <Link
                       className="flex items-center p-2"
-                      to="/تماس-با-ما"
+                      to="/پرسان"
                       onClick={handleClose}
                     >
-                      <span className="ml-4">تماس با ما</span>
+                      <span className="ml-4">پرسان</span>
                     </Link>
                   </li>
                   <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
                     <Link
                       className="flex items-center p-2"
-                      to="/همکاری-با-ما"
+                      to="/موسیان"
                       onClick={handleClose}
                     >
-                      <span className="ml-4">همکاری با ما</span>
-                    </Link>
-                  </li>
-                  <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
-                    <Link
-                      className="flex items-center p-2"
-                      to="/صدای-مشتری"
-                      onClick={handleClose}
-                    >
-                      <span className="ml-4">صدای مشتری</span>
+                      <span className="ml-4">موسیان</span>
                     </Link>
                   </li>
                 </ul>
@@ -166,35 +157,35 @@ const MenuModal = ({ modalOpen, handleClose }) => {
                 onClick={() => handleOpen(2)}
                 className="text-gray-400 hover:text-black transition-colors ease-linear duration-200"
               >
-                بلاگ
+               همکاری با ما
               </AccordionHeader>
               <AccordionBody>
                 <ul>
                   <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
                     <Link
                       className="flex items-center p-2"
-                      to="/مقالات"
+                      to="/تولید-کنندگان"
                       onClick={handleClose}
                     >
-                      <span className="ml-4">مقالات</span>
+                      <span className="ml-4">تولید کنندگان</span>
                     </Link>
                   </li>
                   <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
                     <Link
                       className="flex items-center p-2"
-                      to="/تجارب-موفق"
+                      to="/شرکت-پخش"
                       onClick={handleClose}
                     >
-                      <span className="ml-4">تجارب موفق</span>
+                      <span className="ml-4">شرکت های پخش</span>
                     </Link>
                   </li>
                   <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
                     <Link
                       className="flex items-center p-2"
-                      to="/مجله-عقاب"
+                      to="/پرسنل"
                       onClick={handleClose}
                     >
-                      <span className="ml-4">مجله عقاب</span>
+                      <span className="ml-4">پرسنل</span>
                     </Link>
                   </li>
                 </ul>
@@ -205,28 +196,28 @@ const MenuModal = ({ modalOpen, handleClose }) => {
           <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
             <Link
               className="flex items-center py-2"
-              to="/خدمات"
+              to="/news"
               onClick={handleClose}
             >
-              <span className="ml-4">خدمات</span>
+              <span className="ml-4">اخبار و رویدادها</span>
             </Link>
           </li>
           <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
             <Link
               className="flex items-center py-3"
-              to="/مشتریان"
+              to="/about-us"
               onClick={handleClose}
             >
-              <span className="ml-4"> مشتریان</span>
+              <span className="ml-4">درباره ما</span>
             </Link>
           </li>
           <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
             <Link
               className="flex items-center py-3"
-              to="/brands"
+              to="/contact-us"
               onClick={handleClose}
             >
-              <span className="ml-4">برند ها</span>
+              <span className="ml-4">تماس با ما</span>
             </Link>
           </li>
 

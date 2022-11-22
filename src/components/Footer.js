@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-400">
-      <div className="w-full lg:w-[80%] mx-auto mt-10 lg:mt-16 p-4">
+    <footer className="border-t mt-10 lg:mt-16">
+      <div className="w-full lg:w-[80%] mx-auto p-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h1 className="mb-6">تماس با ما</h1>

@@ -53,32 +53,29 @@ const Header = () => {
   }, [isMenuOpen, isSearchOpen]);
 
   return (
-    <header>
-      <nav className="w-full flex items-center justify-between lg:justify-center py-4 px-3">
-        <div className="flex justify-center items-center rounded-md mr-0 lg:hidden">
+    <header className="lg:bg-gray-700">
+      <nav className="w-full flex items-center justify-center py-4 px-3">
+        {/* <div className="flex justify-center items-center rounded-md mr-0 lg:hidden">
           <button type="button" onClick={openMenu}>
             <GiHamburgerMenu size={35} />
           </button>
-        </div>
-        <Link className="hidden lg:block ml-[20px]" to="/">
-          <img src={logo} alt="pakhshoghab" className="w-full h-full" />
-        </Link>
+        </div> */}
 
         <Link className="block lg:hidden" to="/">
           <img src={logo} alt="pakhshoghab" className="w-full h-full" />
         </Link>
 
         <div className="hidden lg:flex">
-          <ul className="flex text-gray-400 gap-1 xl:gap-3 font-semibold lg:text-md xl:text-lg">
-            <li className="hover:text-black transition-all ease-linear duration-200">
+          <ul className="flex text-gray-400 gap-1 xl:gap-3 font-semibold lg:text-sm xl:text-lg">
+            <li className="hover:text-white transition-all ease-linear duration-200">
               <Link
-                className="block w-full h-full px-2 xl:px-4 py-[20px]"
+                className="block w-full h-full pr-3 xl:pr-4 py-[20px]"
                 to="/"
               >
                 صفحه اصلی
               </Link>
             </li>
-            <Menu
+            {/* <Menu
               as="li"
               className="relative inline-block text-left hover:text-black transition-all ease-linear duration-200"
             >
@@ -125,37 +122,121 @@ const Header = () => {
                   </div>
                 </Menu.Items>
               </Transition>
-            </Menu>
+            </Menu> */}
 
-            <li className="hover:text-black transition-all ease-linear duration-200">
+            <li className="group relative cursor-pointer hover:text-white transition-all ease-linear duration-200">
+              <div className="font-semibold rounded inline-flex items-center h-full pr-3 xl-pr-4">
+                <span className="ml-1">محصولات</span>
+                <svg
+                  className="fill-current h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                </svg>
+              </div>
+              <ul className="absolute hidden text-gray-700 pt-1 group-hover:block w-56 shadow-md">
+                <li>
+                  <Link
+                    className="rounded-t bg-gray-200 hover:bg-gray-500 hover:text-white py-2 px-4 block whitespace-no-wrap text-sm"
+                    to="/صنایع-غذایی"
+                  >
+                    صنایع غذایی
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="rounded-b bg-gray-200 hover:bg-gray-500 hover:text-white py-2 px-4 block whitespace-no-wrap text-sm"
+                    to="/سلولزی-بهداشتی"
+                  >
+                    سلولزی بهداشتی
+                  </Link>
+                </li>
+              </ul>
+            </li>
+
+            <li className="group relative cursor-pointer hover:text-white transition-all ease-linear duration-200">
+              <div className="font-semibold rounded inline-flex items-center h-full pr-3 xl:pr-4">
+                <span className="ml-1">برند ها</span>
+                <svg
+                  className="fill-current h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                </svg>
+              </div>
+              <ul className="absolute hidden text-gray-700 pt-1 group-hover:block w-56 shadow-md">
+                <li>
+                  <Link
+                    className="rounded-t bg-gray-200 hover:bg-gray-500 hover:text-white py-2 px-4 block whitespace-no-wrap text-sm"
+                    to="/پرسان"
+                  >
+                    پرسان
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="rounded-b bg-gray-200 hover:bg-gray-500 hover:text-white py-2 px-4 block whitespace-no-wrap text-sm"
+                    to="/موسیان"
+                  >
+                    موسیان
+                  </Link>
+                </li>
+              </ul>
+            </li>
+
+            <li className="group relative cursor-pointer hover:text-white transition-all ease-linear duration-200">
+              <div className="font-semibold rounded inline-flex items-center h-full pr-3 xl:pr-4">
+                <span className="ml-1">همکاری با ما</span>
+                <svg
+                  className="fill-current h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                </svg>
+              </div>
+              <ul className="absolute hidden text-gray-700 pt-1 group-hover:block w-56 shadow-md">
+                <li>
+                  <Link
+                    className="rounded-t bg-gray-200 hover:bg-gray-500 hover:text-white py-2 px-4 block whitespace-no-wrap text-sm"
+                    to="/تولید-کنندگان"
+                  >
+                    تولید کنندگان
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="bg-gray-200 hover:bg-gray-500 hover:text-white py-2 px-4 block whitespace-no-wrap text-sm"
+                    to="/شرکت-پخش"
+                  >
+                    شرکت های پخش
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="rounded-b bg-gray-200 hover:bg-gray-500 hover:text-white py-2 px-4 block whitespace-no-wrap text-sm"
+                    to="/پرسنل"
+                  >
+                    پرسنل
+                  </Link>
+                </li>
+              </ul>
+            </li>
+
+            <li className="hover:text-white transition-all ease-linear duration-200">
               <Link
-                className="block w-full h-full px-2 xl:px-4 py-[20px]"
-                to="/خدمات"
+                className="block w-full h-full pr-3 xl:pr-4 py-[20px]"
+                to="/news"
               >
-                خدمات
+                اخبار و رویدادها
               </Link>
             </li>
 
-            <li className="hover:text-black transition-all ease-linear duration-200">
-              <Link
-                className="block w-full h-full px-2 xl:px-4 py-[20px]"
-                to="/مشتریان"
-              >
-                مشتریان
-              </Link>
-            </li>
-            <li className="hover:text-black transition-all ease-linear duration-200">
-              <Link
-                className="block w-full h-full px-2 xl:px-4 py-[20px]"
-                to="/brands"
-              >
-                برندها
-              </Link>
-            </li>
-
-            <Menu
+            {/* <Menu
               as="li"
-              className="relative inline-block text-left hover:text-black transition-all ease-linear duration-200"
+              className="relative inline-block text-left hover:text-white transition-all ease-linear duration-200"
             >
               <Menu.Button className="inline-flex w-full h-full px-2 xl:px-4 justify-between items-center rounded-md font-semibold lg:text-md">
                 <span>بلاگ</span>
@@ -212,11 +293,11 @@ const Header = () => {
                   </div>
                 </Menu.Items>
               </Transition>
-            </Menu>
+            </Menu> */}
 
-            <Menu
+            {/* <Menu
               as="li"
-              className="relative inline-block text-left hover:text-black transition-all ease-linear duration-200"
+              className="relative inline-block text-left hover:text-white transition-all ease-linear duration-200"
             >
               <Menu.Button className="inline-flex w-full h-full px-2 xl:px-4 justify-between items-center rounded-md font-semibold lg:text-md">
                 <span>تماس با ما</span>
@@ -273,11 +354,29 @@ const Header = () => {
                   </div>
                 </Menu.Items>
               </Transition>
-            </Menu>
-            <li className="hover:text-black transition-all ease-linear duration-200">
+            </Menu> */}
+
+            <li className="hover:text-white transition-all ease-linear duration-200">
+              <Link
+                className="block w-full h-full pr-3 xl:pr-4 py-[20px]"
+                to="/about-us"
+              >
+                درباره ما
+              </Link>
+            </li>
+
+            <li className="hover:text-white transition-all ease-linear duration-200">
+              <Link
+                className="block w-full h-full pr-3 xl:pr-4 py-[20px]"
+                to="/contact-us"
+              >
+                تماس با ما
+              </Link>
+            </li>
+            <li className="hover:text-white transition-all ease-linear duration-200">
               <Link
                 to="/EN"
-                className="block w-full h-full px-2 xl:px-4 py-[20px]"
+                className="flex items-center justify-center w-full h-full pr-3 xl:pr-4 py-[20px] "
               >
                 EN
               </Link>
@@ -285,14 +384,66 @@ const Header = () => {
           </ul>
         </div>
         <button
-          className="mr-4 p-2"
+          className="mr-8 p-2 text-gray-400 hover:text-white hidden lg:block"
           onClick={() => {
             isSearchOpen ? closeSearch() : openSearch();
           }}
         >
           <GoSearch size={25} />
         </button>
+
+        <Link className="hidden lg:block mr-8" to="/">
+          <img src={logo} alt="pakhshoghab" className="w-full h-full" />
+        </Link>
       </nav>
+
+      <div className="block lg:hidden z-[10000] fixed bottom-0 h-[44px] w-full">
+        <nav className="absolute left-0 top-0 w-full h-full py-2 flex justify-between items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="drop-shadow-md absolute right-[50%] bottom-[-2px] translate-x-[50%]"
+            width="768"
+            height="50"
+            viewBox="0 0 768 50"
+          >
+            <path
+              fill="rgb(55,65,81)"
+              fillRule="evenodd"
+              d="M-15,0H345c12.855,0,16.965,20,39,20,22.238,0,25.921-20,39-20H828V95H-15V0Z"
+            ></path>
+          </svg>
+          <button
+            type="button"
+            onClick={openMenu}
+            className="z-[10] w-full h-full flex justify-center items-center text-white"
+          >
+            <GiHamburgerMenu size={30} />
+          </button>
+
+          <Link
+            to="/"
+            className="z-[10] absolute right-[50%] top-[-35px] translate-x-[50%] w-[47px] h-[47px] rounded-[50%] text-[18px] leading-[50px] flex justify-center items-center bg-[#B00937] text-[#ffffff]"
+          >
+            <svg
+              class="w-8 h-8"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+            </svg>
+          </Link>
+
+          <button
+          className="z-[10] w-full h-full flex justify-center items-center text-white"
+          onClick={() => {
+            isSearchOpen ? closeSearch() : openSearch();
+          }}
+        >
+          <GoSearch size={25} />
+        </button>
+        </nav>
+      </div>
       {/* Responsive navbar */}
       <AnimatePresence
         initial={false}
