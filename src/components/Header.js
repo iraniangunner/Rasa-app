@@ -53,14 +53,8 @@ const Header = () => {
   }, [isMenuOpen, isSearchOpen]);
 
   return (
-    <header className="lg:bg-gray-700">
+    <header className="lg:bg-gray-700 lg:fixed lg:top-0 lg:left-0 lg:right-0 z-[1000]">
       <nav className="w-full flex items-center justify-center py-4 px-3">
-        {/* <div className="flex justify-center items-center rounded-md mr-0 lg:hidden">
-          <button type="button" onClick={openMenu}>
-            <GiHamburgerMenu size={35} />
-          </button>
-        </div> */}
-
         <Link className="block lg:hidden" to="/">
           <img src={logo} alt="pakhshoghab" className="w-full h-full" />
         </Link>
@@ -75,54 +69,6 @@ const Header = () => {
                 صفحه اصلی
               </Link>
             </li>
-            {/* <Menu
-              as="li"
-              className="relative inline-block text-left hover:text-black transition-all ease-linear duration-200"
-            >
-              <Menu.Button className="inline-flex w-full h-full px-2 xl:px-4 justify-between items-center rounded-md font-semibold lg:text-md hover:text-black transition-all ease-linear duration-200">
-                <span>درباره ما</span>
-                <ChevronDownIcon className="mr-2 h-5 w-5" aria-hidden="true" />
-              </Menu.Button>
-
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-              >
-                <Menu.Items className="absolute right-0 mt-2 z-[10] w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                  <div className="px-1 py-1 ">
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link
-                          to="/درباره-پخش-عقاب"
-                          className={`${
-                            active ? "bg-gray-400 text-white" : "text-gray-900"
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                        >
-                          درباره پخش عقاب
-                        </Link>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link
-                          to="/چارت-سازمانی"
-                          className={`${
-                            active ? "bg-gray-400 text-white" : "text-gray-900"
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                        >
-                          چارت سازمانی
-                        </Link>
-                      )}
-                    </Menu.Item>
-                  </div>
-                </Menu.Items>
-              </Transition>
-            </Menu> */}
 
             <li className="group relative cursor-pointer hover:text-white transition-all ease-linear duration-200">
               <div className="font-semibold rounded inline-flex items-center h-full pr-3 xl-pr-4">
@@ -135,7 +81,7 @@ const Header = () => {
                   <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                 </svg>
               </div>
-              <ul className="absolute hidden text-gray-700 pt-1 group-hover:block w-56 shadow-md">
+              <ul className="absolute text-gray-700 pt-1 opacity-0 scale-y-0 invisible group-hover:opacity-100 group-hover:scale-y-100 group-hover:visible origin-[0_0_0] transition-all w-56 shadow-md">
                 <li>
                   <Link
                     className="rounded-t bg-gray-200 hover:bg-gray-500 hover:text-white py-2 px-4 block whitespace-no-wrap text-sm"
@@ -166,7 +112,7 @@ const Header = () => {
                   <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                 </svg>
               </div>
-              <ul className="absolute hidden text-gray-700 pt-1 group-hover:block w-56 shadow-md">
+              <ul className="absolute text-gray-700 pt-1 opacity-0 scale-y-0 invisible group-hover:opacity-100 group-hover:scale-y-100 group-hover:visible origin-[0_0_0] transition-all w-56 shadow-md">
                 <li>
                   <Link
                     className="rounded-t bg-gray-200 hover:bg-gray-500 hover:text-white py-2 px-4 block whitespace-no-wrap text-sm"
@@ -197,7 +143,7 @@ const Header = () => {
                   <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                 </svg>
               </div>
-              <ul className="absolute hidden text-gray-700 pt-1 group-hover:block w-56 shadow-md">
+              <ul className="absolute text-gray-700 pt-1 opacity-0 scale-y-0 invisible group-hover:opacity-100 group-hover:scale-y-100 group-hover:visible origin-[0_0_0] transition-all w-56 shadow-md">
                 <li>
                   <Link
                     className="rounded-t bg-gray-200 hover:bg-gray-500 hover:text-white py-2 px-4 block whitespace-no-wrap text-sm"
@@ -233,128 +179,6 @@ const Header = () => {
                 اخبار و رویدادها
               </Link>
             </li>
-
-            {/* <Menu
-              as="li"
-              className="relative inline-block text-left hover:text-white transition-all ease-linear duration-200"
-            >
-              <Menu.Button className="inline-flex w-full h-full px-2 xl:px-4 justify-between items-center rounded-md font-semibold lg:text-md">
-                <span>بلاگ</span>
-                <ChevronDownIcon className="mr-2 h-5 w-5" aria-hidden="true" />
-              </Menu.Button>
-
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-              >
-                <Menu.Items className="absolute right-0 mt-2 z-[10] w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                  <div className="px-1 py-1">
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link
-                          to="/مقالات"
-                          className={`${
-                            active ? "bg-gray-400 text-white" : "text-gray-900"
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                        >
-                          مقالات
-                        </Link>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link
-                          to="/تجارب-موفق"
-                          className={`${
-                            active ? "bg-gray-400 text-white" : "text-gray-900"
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                        >
-                          تجارب موفق
-                        </Link>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link
-                          to="/مجله-عقاب"
-                          className={`${
-                            active ? "bg-gray-400 text-white" : "text-gray-900"
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                        >
-                          مجله عقاب
-                        </Link>
-                      )}
-                    </Menu.Item>
-                  </div>
-                </Menu.Items>
-              </Transition>
-            </Menu> */}
-
-            {/* <Menu
-              as="li"
-              className="relative inline-block text-left hover:text-white transition-all ease-linear duration-200"
-            >
-              <Menu.Button className="inline-flex w-full h-full px-2 xl:px-4 justify-between items-center rounded-md font-semibold lg:text-md">
-                <span>تماس با ما</span>
-                <ChevronDownIcon className="mr-2 h-5 w-5" aria-hidden="true" />
-              </Menu.Button>
-
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-100"
-                enterFrom="transform opacity-0 scale-95"
-                enterTo="transform opacity-100 scale-100"
-                leave="transition ease-in duration-75"
-                leaveFrom="transform opacity-100 scale-100"
-                leaveTo="transform opacity-0 scale-95"
-              >
-                <Menu.Items className="absolute right-0 mt-2 z-[10] w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                  <div className="px-1 py-1">
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link
-                          to="/تماس-با-ما"
-                          className={`${
-                            active ? "bg-gray-400 text-white" : "text-gray-900"
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                        >
-                          تماس با ما
-                        </Link>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link
-                          to="/همکاری-با-ما"
-                          className={`${
-                            active ? "bg-gray-400 text-white" : "text-gray-900"
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                        >
-                          همکاری با ما
-                        </Link>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link
-                          to="/صدای-مشتری"
-                          className={`${
-                            active ? "bg-gray-400 text-white" : "text-gray-900"
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                        >
-                          صدای مشتری
-                        </Link>
-                      )}
-                    </Menu.Item>
-                  </div>
-                </Menu.Items>
-              </Transition>
-            </Menu> */}
 
             <li className="hover:text-white transition-all ease-linear duration-200">
               <Link
@@ -435,13 +259,13 @@ const Header = () => {
           </Link>
 
           <button
-          className="z-[10] w-full h-full flex justify-center items-center text-white"
-          onClick={() => {
-            isSearchOpen ? closeSearch() : openSearch();
-          }}
-        >
-          <GoSearch size={25} />
-        </button>
+            className="z-[10] w-full h-full flex justify-center items-center text-white"
+            onClick={() => {
+              isSearchOpen ? closeSearch() : openSearch();
+            }}
+          >
+            <GoSearch size={25} />
+          </button>
         </nav>
       </div>
       {/* Responsive navbar */}

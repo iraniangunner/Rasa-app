@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Brands from "./components/Brands";
 import { Suspense } from "react";
 import cookies from 'js-cookie'
+import News from "./components/News";
 
 function App() {
 
@@ -14,10 +15,11 @@ function App() {
 
   return (
     <Suspense fallback="loading...">
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/brands" element={<Brands />} />
+        <Route path="/news" element={<News />}/>
       </Routes>
       <Footer />
     </Suspense>
