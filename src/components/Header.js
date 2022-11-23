@@ -8,6 +8,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { AnimatePresence } from "framer-motion";
 import SearchModal from "./framerModal/SearchModal";
 import MenuModal from "./framerModal/MenuModal";
+import HeaderSlider from "./headerSlider/HeaderSlider";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,7 +54,7 @@ const Header = () => {
   }, [isMenuOpen, isSearchOpen]);
 
   return (
-    <header className="lg:bg-gray-700 lg:fixed lg:top-0 lg:left-0 lg:right-0 z-[1000]">
+    <header className="bg-gray-700 lg:fixed lg:top-0 lg:left-0 lg:right-0 z-[1000]">
       <nav className="w-full flex items-center justify-center py-4 px-3">
         <Link className="block lg:hidden" to="/">
           <img src={logo} alt="pakhshoghab" className="w-full h-full" />
@@ -268,6 +269,7 @@ const Header = () => {
           </button>
         </nav>
       </div>
+      
       {/* Responsive navbar */}
       <AnimatePresence
         initial={false}

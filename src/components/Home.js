@@ -1,17 +1,12 @@
 import { TbArrowBigUpLines } from "react-icons/tb";
-import nancy from "../images/nancy.png";
-import rojin from "../images/rojin.png";
-import viatana from "../images/viatana.png";
-import { Link } from "react-router-dom";
 import present from "../videos/pakhsh.mp4";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import barbican from "../images/barbican.png";
-import pakhsh from "../videos/pakhsh.mp4";
 import NewsSlider from "./swiper/NewsSlider";
 import Header from "./Header";
 import parsan from "../images/parsan.png";
 import { motion } from "framer-motion";
+import HeaderSlider from "./headerSlider/HeaderSlider";
 
 const Home = () => {
   // const responsive = {
@@ -57,12 +52,13 @@ const Home = () => {
     },
   };
 
-  const cardTransition = { type: "spring", bounce: 0.4, duration: 0.8 };
+  // const cardTransition = { type: "spring", bounce: 0.4, duration: 0.8 };
 
   return (
     <>
       <Header />
-      <div className="p-4 w-full lg:w-[80%] mx-auto my-10 lg:mt-64 lg:mb-32">
+      <HeaderSlider />
+      <div className="p-4 w-full lg:w-[80%] mx-auto my-10 lg:my-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
             <h1 className="font-[500] text-[16px] p-4 lg:mt-[-40px] sm:text-[22px] xl:text-[35px]">
@@ -97,7 +93,7 @@ const Home = () => {
                 <TbArrowBigUpLines className="arrow" size={35} />
                 <div className="flex items-center">
                   {/* <div className="flasher mt-2"></div> */}
-                  <p>پخش عقاب چگونه کار می کند؟</p>
+                  <p>راسا صنعت چگونه کار می کند؟</p>
                 </div>
               </div>
             </div>
@@ -105,26 +101,24 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full lg:w-[90%] mx-auto">
+ 
+   
+    
+
+      <div className="w-full lg:w-[90%] mx-auto my-10 lg:my-20">
         <h1 className="flex justify-center items-center text-[22px] my-10">
           شرکای تجاری راسا صنعت
         </h1>
-        <div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-3 overflow-x-hidden"
-          // initial="offscreen"
-          // whileInView="onscreen"
-          // viewport={{ once: true, amount: 0.8 }}
-        >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-3 overflow-x-hidden">
           <motion.div
             className="flex justify-center items-center"
-            // variants={firstImgVariants}
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.8 }}
             // transition={{ ...cardTransition, delay: 0.3 }}
           >
             <motion.div variants={firstImgVariants}>
-              <img src={parsan} />
+              <img src={parsan} alt="parsan" />
             </motion.div>
           </motion.div>
 
@@ -133,11 +127,10 @@ const Home = () => {
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.8 }}
-            // variants={secondImgVariants}
             // transition={{ ...cardTransition, delay: 0.6 }}
           >
             <motion.div variants={secondImgVariants}>
-              <img src={parsan} />
+              <img src={parsan} alt="moosian" />
             </motion.div>
           </motion.div>
         </div>
@@ -177,8 +170,8 @@ const Home = () => {
           </Link>
         </div> */}
       </div>
-      <div className="w-full lg:w-[80%] mx-auto mt-10 lg:mt-16">
-        <h1 className="flex justify-center items-center text-[22px] my-20 mb-10">
+      <div className="w-full lg:w-[80%] mx-auto my-10 lg:my-20">
+        <h1 className="flex justify-center items-center text-[22px] mt-20 mb-4">
           آخرین اخبار و رویدادهای ما
         </h1>
         <NewsSlider />
