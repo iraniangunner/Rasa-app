@@ -54,14 +54,14 @@ const Header = () => {
   }, [isMenuOpen, isSearchOpen]);
 
   return (
-    <header className="bg-gray-700 lg:fixed lg:top-0 lg:left-0 lg:right-0 z-[1000]">
-      <nav className="w-full flex items-center justify-center py-4 px-3">
+    <header className="bg-gray-700 lg:sticky lg:top-0 lg:left-0 lg:right-0 z-[1000]">
+      <nav className="w-full flex items-center justify-center lg:justify-around py-2 px-3">
         <Link className="block lg:hidden" to="/">
           <img src={logo} alt="pakhshoghab" className="w-full h-full" />
         </Link>
 
         <div className="hidden lg:flex">
-          <ul className="flex text-gray-400 gap-1 xl:gap-3 font-semibold lg:text-sm xl:text-lg">
+          <ul className="flex text-gray-300 gap-1 xl:gap-3 font-semibold lg:text-sm xl:text-[1rem]">
             <li className="hover:text-white transition-all ease-linear duration-200">
               <Link
                 className="block w-full h-full pr-3 xl:pr-4 py-[20px]"
@@ -207,15 +207,18 @@ const Header = () => {
               </Link>
             </li>
           </ul>
+          <div className="w-[1px] bg-red-400 mr-4 xl:mr-10"></div>
+          <div className="hidden lg:flex justify-center items-center mr-4 xl:mr-10">
+            <button
+              className="p-2 text-gray-300 hover:text-white transition-all ease-linear duration-200"
+              onClick={() => {
+                isSearchOpen ? closeSearch() : openSearch();
+              }}
+            >
+              <GoSearch size={25} />
+            </button>
+          </div>
         </div>
-        <button
-          className="mr-8 p-2 text-gray-400 hover:text-white hidden lg:block"
-          onClick={() => {
-            isSearchOpen ? closeSearch() : openSearch();
-          }}
-        >
-          <GoSearch size={25} />
-        </button>
 
         <Link className="hidden lg:block mr-8" to="/">
           <img src={logo} alt="pakhshoghab" className="w-full h-full" />
@@ -269,7 +272,7 @@ const Header = () => {
           </button>
         </nav>
       </div>
-      
+
       {/* Responsive navbar */}
       <AnimatePresence
         initial={false}

@@ -34,9 +34,9 @@ const ScrollToTop = () => {
   return (
     <button
       type="button"
-      className={`hidden lg:flex justify-center items-center fixed bottom-[30px] right-[40px] ${
+      className={`hidden lg:flex justify-center items-center fixed bottom-[30px] left-[40px] ${
         isVisible ? "opacity-100 visible" : "opacity-0 invisible"
-      } transition-all duration-500 z-[100] bg-[#f7f7f7] text-[#00000080] w-[43px] h-[43px] shadow-lg`}
+      } transition-all duration-500 z-[100] bg-[#f7f7f7] text-[#00000080] w-[43px] h-[43px] rounded-md shadow-lg`}
       onClick={scrollToTop}
     >
       <svg

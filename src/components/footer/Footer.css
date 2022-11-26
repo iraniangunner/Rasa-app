@@ -1,0 +1,23 @@
+.footer_top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  row-gap: 2rem;
+}
+
+.company_info {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+@media screen and (min-width: 576px) {
+  .company_info {
+    grid-column: span 2;
+  }
+
+  /* .footer_top{
+    grid-template-columns:repeat(auto-fit, minmax(10rem, 1fr)) ;
+  } */
+}

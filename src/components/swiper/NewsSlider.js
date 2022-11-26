@@ -55,7 +55,7 @@ const NewsSlider = () => {
         slidesPerView={"auto"}
         // slidesPerView={3}
         dir="ltr"
-        grabCursor={true}
+        // grabCursor={true}
         autoplay={{
           delay: 3500,
           disableOnInteraction: false,
@@ -94,26 +94,54 @@ const NewsSlider = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={first} />
-          <div className="absolute w-full h-[40%] bottom-0 left-0 right-0 px-4 py-2 text-right text-white">
-            <p>1400/2/5</p>
-            <p>مراسم تقدیر از آقای رییس</p>
+          <div className="w-full h-full relative group cursor-pointer overflow-hidden">
+            <div className="absolute flex justify-center items-center rounded-[10px] inset-0 bg-[#000000e1] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <p className="text-white">جلسه ما</p>
+            </div>
+            <img src={first} className="rounded-[10px]" alt="first" />
+          </div>
+
+        
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className="w-full h-full relative group cursor-pointer overflow-hidden">
+            <div className="absolute flex justify-center items-center rounded-[10px] inset-0 bg-[#000000e1] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <p className="text-white">جلسه ما</p>
+            </div>
+            <img src={first} className="rounded-[10px]" alt="first"/>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={first} />
+        <div className="w-full h-full relative group cursor-pointer overflow-hidden">
+            <div className="absolute flex justify-center items-center rounded-[10px] inset-0 bg-[#000000e1] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <p className="text-white">جلسه ما</p>
+            </div>
+            <img src={first} className="rounded-[10px]" alt="first" />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={first} />
+        <div className="w-full h-full relative group cursor-pointer overflow-hidden">
+            <div className="absolute flex justify-center items-center rounded-[10px] inset-0 bg-[#000000e1] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <p className="text-white">جلسه ما</p>
+            </div>
+            <img src={first} className="rounded-[10px]" alt="first" />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={first} />
+        <div className="w-full h-full relative group cursor-pointer overflow-hidden">
+            <div className="absolute flex justify-center items-center rounded-[10px] inset-0 bg-[#000000e1] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <p className="text-white">جلسه ما</p>
+            </div>
+            <img src={first} className="rounded-[10px]" alt="first" />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={first} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={first} />
+        <div className="w-full h-full relative group cursor-pointer overflow-hidden">
+            <div className="absolute flex justify-center items-center rounded-[10px] inset-0 bg-[#000000e1] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <p className="text-white">جلسه ما</p>
+            </div>
+            <img src={first} className="rounded-[10px]" alt="first"/>
+          </div>
         </SwiperSlide>
       </Swiper>
     </div>

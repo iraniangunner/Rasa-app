@@ -7,27 +7,12 @@ import Header from "./Header";
 import parsan from "../images/parsan.png";
 import { motion } from "framer-motion";
 import HeaderSlider from "./headerSlider/HeaderSlider";
+import { Fragment, useState, useRef } from "react";
+import ModalVideo from "react-modal-video";
+import trucks from "../videos/pakhsh.mp4";
+import "../../node_modules/react-modal-video/scss/modal-video.scss";
 
 const Home = () => {
-  // const responsive = {
-  //   superLargeDesktop: {
-  //     breakpoint: { max: 4000, min: 1200 },
-  //     items: 4,
-  //   },
-  //   desktop: {
-  //     breakpoint: { max: 1200, min: 992 },
-  //     items: 3,
-  //   },
-  //   tablet: {
-  //     breakpoint: { max: 992, min: 768 },
-  //     items: 2,
-  //   },
-  //   mobile: {
-  //     breakpoint: { max: 768, min: 0 },
-  //     items: 1,
-  //   },
-  // };
-
   const firstImgVariants = {
     offscreen: {
       opacity: 0,
@@ -52,16 +37,19 @@ const Home = () => {
     },
   };
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const ref = useRef(null);
   // const cardTransition = { type: "spring", bounce: 0.4, duration: 0.8 };
 
   return (
     <>
-      <Header />
       <HeaderSlider />
-      <div className="p-4 w-full lg:w-[80%] mx-auto my-10 lg:my-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <Header />
+      <div className="p-4 w-full xl:w-[80%] mx-auto my-10 sm:mb-56 sm:mt-20 md:my-20 lg:my-36">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h1 className="font-[500] text-[16px] p-4 lg:mt-[-40px] sm:text-[22px] xl:text-[35px]">
+            <h1 className="font-[500] text-[16px] sm:mt-10 md:mt-0 p-4 lg:mt-[-40px] sm:text-[22px] xl:text-[35px]">
               مدیریت علمی در فروش و پخش محصولات غذایی شوینده و بهداشتی
             </h1>
             <p className="text-[14px] sm:text-[19px] text-justify p-4">
@@ -81,7 +69,10 @@ const Home = () => {
                 loading="lazy"
                 width="800"
                 height="500"
-                controls
+                // controls
+                autoPlay
+                muted
+                loop
               >
                 <source
                   // src="http://pakhshoghab.com/wp-content/uploads/2018/03/Paksh-Oghab-StopMotion.mp4"
@@ -89,27 +80,19 @@ const Home = () => {
                   type="video/mp4"
                 />
               </video>
-              <div className="mt-6 flex flex-col justify-center items-center">
-                <TbArrowBigUpLines className="arrow" size={35} />
-                <div className="flex items-center">
-                  {/* <div className="flasher mt-2"></div> */}
-                  <p>راسا صنعت چگونه کار می کند؟</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
+        <div className="flex justify-center items-center mt-16">
+           <button>Open video</button>
+        </div>
       </div>
 
- 
-   
-    
-
-      <div className="w-full lg:w-[90%] mx-auto my-10 lg:my-20">
-        <h1 className="flex justify-center items-center text-[22px] my-10">
-          شرکای تجاری راسا صنعت
+      <div className="my-10 sm:my-56 md:my-20 lg:my-36 bg-gray-800">
+        <h1 className="flex justify-center items-center text-[22px] py-4 px-2 sm:py-6 text-gray-300">
+          برند های تجاری راسا صنعت
         </h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-3 overflow-x-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-16 sm:gap-8 lg:gap-3 overflow-x-hidden p-12 pb-24 sm:p-16 sm:pb-32">
           <motion.div
             className="flex justify-center items-center"
             initial="offscreen"
@@ -134,43 +117,11 @@ const Home = () => {
             </motion.div>
           </motion.div>
         </div>
-        {/* <Carousel responsive={responsive} autoPlay={true} infinite={true}>
-          <div className="flex justify-center items-center">
-            <img src={nancy} alt="Nancy" />
-          </div>
-          <div className="flex justify-center items-center">
-            <img src={barbican} alt="barbican" />
-          </div>
-          <div className="flex justify-center items-center">
-            <img src={rojin} alt="rojin" />
-          </div>
-          <div className="flex justify-center items-center">
-            <img src={viatana} alt="viatana" />
-          </div>
-
-          <div className="flex justify-center items-center">
-            <img src={nancy} alt="Nancy" />
-          </div>
-          <div className="flex justify-center items-center">
-            <img src={barbican} alt="barbican" />
-          </div>
-          <div className="flex justify-center items-center">
-            <img src={rojin} alt="rojin" />
-          </div>
-          <div className="flex justify-center items-center">
-            <img src={viatana} alt="viatana" />
-          </div>
-        </Carousel> */}
-        {/* <div className="flex justify-center items-center mt-8">
-          <Link
-            to="/brands"
-            className="p-4 bg-blue-500 rounded-md text-white hover:text-black hover:bg-gray-200"
-          >
-            مشاهده سایر برند ها
-          </Link>
-        </div> */}
       </div>
-      <div className="w-full lg:w-[80%] mx-auto my-10 lg:my-20">
+
+
+
+      <div className="w-full xl:w-[80%] mx-auto my-10 sm:my-56 md:my-20 lg:my-36">
         <h1 className="flex justify-center items-center text-[22px] mt-20 mb-4">
           آخرین اخبار و رویدادهای ما
         </h1>
