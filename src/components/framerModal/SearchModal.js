@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Backdrop from "./Backdrop";
 import { BiSearchAlt } from "react-icons/bi";
+import present from "../../videos/pakhsh.mp4";
 
 const dropIn = {
   hidden: {

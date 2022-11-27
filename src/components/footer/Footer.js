@@ -46,9 +46,9 @@ const Footer = () => {
       </div>
       <div className="max-w-[116rem] mt-96 sm:mt-24 md:mt-12 mx-auto py-[1.5rem]">
         <div className="footer_top">
-          <div className="company_info py-10 sm:py-0 xl:pr-[5rem]">
+          <div className="company_info py-10 sm:py-0 xl:pr-[5rem] flex flex-col justify-center items-center lg:items-stretch lg:justify-start gap-[1.5rem]">
             <div>
-              <img src={logo} alt="pakhshoghab" width={195} height={70}/>
+              <img src={logo} alt="pakhshoghab" width={195} height={70} />
             </div>
             <h4 className="text-[13px]">
               پخش عقاب را در شبکه های اجتماعی دنبال کنید:
@@ -74,7 +74,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
+
+          <div className="sm:flex flex-col items-center lg:items-stretch">
             <h4 className="mb-6">لینک های مفید</h4>
             <ul className="flex flex-col items-start gap-2 text-[14px]">
               <li className="flex items-center">
@@ -115,7 +116,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
+
+          <div className="sm:flex flex-col items-center lg:items-stretch">
             <h4 className="mb-6">لینک های مفید</h4>
             <ul className="flex flex-col items-start gap-2 text-[14px]">
               <li className="flex items-center">
@@ -140,7 +142,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
+
+          <div className="sm:flex flex-col items-center lg:items-stretch">
             <h4 className="mb-6">لینک های مفید</h4>
             <ul className="flex flex-col items-start gap-2 text-[14px]">
               <li className="flex items-center">

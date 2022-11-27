@@ -6,18 +6,25 @@
 
 .company_info {
   grid-column: 1/-1;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.8rem; */
 }
-
 
 @media screen and (min-width: 576px) {
   .company_info {
+    grid-column: span 4;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .company_info {
     grid-column: span 2;
   }
+}
 
-  /* .footer_top{
-    grid-template-columns:repeat(auto-fit, minmax(10rem, 1fr)) ;
-  } */
+@media screen and (max-width: 992px) {
+  .company_info {
+    grid-column: 1/-1;
+  }
 }
