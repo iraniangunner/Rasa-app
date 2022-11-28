@@ -1,19 +1,18 @@
-import { TbArrowBigUpLines } from "react-icons/tb";
+// import { TbArrowBigUpLines } from "react-icons/tb";
 import present from "../videos/pakhsh.mp4";
-import Carousel from "react-multi-carousel";
+// import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import NewsSlider from "./newsCarousel/NewsCarousel";
 import Header from "./Header";
 import parsan from "../images/parsan.png";
 import { motion } from "framer-motion";
 import HeaderSlider from "./headerSlider/HeaderSlider";
-import { Fragment, useState, useRef } from "react";
+import { Fragment, useState } from "react";
 import ModalVideo from "react-modal-video";
-import trucks from "../videos/pakhsh.mp4";
+// import trucks from "../videos/pakhsh.mp4";
 import "../../node_modules/react-modal-video/scss/modal-video.scss";
 import company from "../images/company.png";
-import company2 from "../images/company-2.jpg";
-import FooterSlider from "./honourSlider/HonourSlider";
+import HonourSlider from "./honourSlider/HonourSlider";
 
 const Home = () => {
   const firstImgVariants = {
@@ -146,11 +145,11 @@ const Home = () => {
       </div>
       <div className="my-10 sm:my-56 md:my-20 lg:my-24 bg-[#04244c]">
         <div className="flex justify-center items-center">
-        <h1 className="text-[20px] px-2 py-2 my-4 font-[700] text-gray-300">
-          برند های تجاری راسا صنعت
-        </h1>
+          <h1 className="text-[20px] px-2 py-2 my-4 font-[700] text-gray-300">
+            برند های تجاری راسا صنعت
+          </h1>
         </div>
-     
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-16 sm:gap-8 lg:gap-3 overflow-x-hidden p-12 pb-24 lg:p-16 lg:pb-32">
           <motion.div
             className="flex justify-center items-center"
@@ -177,7 +176,7 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
-      <div className="my-10 sm:my-56 md:my-20 lg:my-32 bg-sec3-pattern bg-right-top bg-contain">
+      <div className="my-10 sm:my-56 md:my-20 lg:my-32">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 overflow-hidden w-full xl:w-[80%] mx-auto">
           <div
             className="p-4"
@@ -238,7 +237,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="my-10 sm:my-56 md:my-20 lg:my-32 bg-sec4-pattern bg-left-top">
+      <div className="my-10 sm:my-56 md:my-20 lg:my-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-16 px-4 py-16 overflow-x-hidden w-full xl:w-[80%] mx-auto">
           <div
             className="flex justify-center items-center bg-company"
@@ -283,7 +282,7 @@ const Home = () => {
         </h1>
         <NewsSlider />
       </div>
-      <FooterSlider />
+      <HonourSlider />
     </>
   );
 };
