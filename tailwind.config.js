@@ -23,6 +23,8 @@ module.exports = withMT({
       backgroundImage: {
         "layout-pattern": "url('./images/pattern.png')",
         "company": "url('./images/company-2.jpg')",
+        "sec4-pattern" : "url('./images/pattern-4.jpg')",
+        "sec3-pattern" : "url('./images/pattern-sec3.jpg')"
       },
     },
   },

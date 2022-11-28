@@ -54,7 +54,7 @@ const Header = () => {
   }, [isMenuOpen, isSearchOpen]);
 
   return (
-    <header className="bg-gray-700 lg:sticky lg:top-0 lg:left-0 lg:right-0 z-[1000]">
+    <header className="bg-[#04244c] lg:sticky lg:top-0 lg:left-0 lg:right-0 z-[1000]">
       <nav className="w-full flex items-center justify-center lg:justify-around py-2 px-3">
         <Link className="block lg:hidden" to="/">
           <img src={logo} alt="pakhshoghab" className="w-full h-full" />
@@ -207,7 +207,7 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-          <div className="w-[1px] bg-red-400 mr-4 xl:mr-10"></div>
+          <div className="w-[1px] bg-[#C70b0d] mr-4 xl:mr-10"></div>
           <div className="hidden lg:flex justify-center items-center mr-4 xl:mr-10">
             <button
               className="p-2 text-gray-300 hover:text-white transition-all ease-linear duration-200"
@@ -235,7 +235,7 @@ const Header = () => {
             viewBox="0 0 768 50"
           >
             <path
-              fill="rgb(55,65,81)"
+              fill="#04244c"
               fillRule="evenodd"
               d="M-15,0H345c12.855,0,16.965,20,39,20,22.238,0,25.921-20,39-20H828V95H-15V0Z"
             ></path>

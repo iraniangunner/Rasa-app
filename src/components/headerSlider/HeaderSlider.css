@@ -9,7 +9,6 @@
 
 .scroll-content {
   animation: scrolling 20s linear infinite;
-  color: #fff;
   list-style: none;
   height: 100%;
   display:flex;

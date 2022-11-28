@@ -15,16 +15,42 @@
   .company_info {
     grid-column: span 4;
   }
+  .footer_top {
+    column-gap: 2rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .company_info {
     grid-column: span 2;
   }
+
+  .footer_top {
+    column-gap: 6rem;
+  }
+  /* .footer_top{
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  } */
 }
+
+
+@media screen and (min-width: 992px) {
+  /* .company_info {
+    grid-column: 1/-1;
+  } */
+
+  .footer_top {
+    column-gap: 0; 
+  }
+}
+
 
 @media screen and (max-width: 992px) {
   .company_info {
     grid-column: 1/-1;
   }
+
+  /* .footer_top {
+    column-gap: 2rem;
+  } */
 }

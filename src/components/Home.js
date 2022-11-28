@@ -2,7 +2,7 @@ import { TbArrowBigUpLines } from "react-icons/tb";
 import present from "../videos/pakhsh.mp4";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import NewsSlider from "./swiper/NewsSlider";
+import NewsSlider from "./newsCarousel/NewsCarousel";
 import Header from "./Header";
 import parsan from "../images/parsan.png";
 import { motion } from "framer-motion";
@@ -11,10 +11,9 @@ import { Fragment, useState, useRef } from "react";
 import ModalVideo from "react-modal-video";
 import trucks from "../videos/pakhsh.mp4";
 import "../../node_modules/react-modal-video/scss/modal-video.scss";
-import IntroModal from "./IntroModal";
 import company from "../images/company.png";
 import company2 from "../images/company-2.jpg";
-import FooterSlider from "./footerSlider/FooterSlider";
+import FooterSlider from "./honourSlider/HonourSlider";
 
 const Home = () => {
   const firstImgVariants = {
@@ -91,7 +90,7 @@ const Home = () => {
       <Header />
       <div className="p-4 w-full xl:w-[80%] mx-auto my-10 sm:my-56 sm:mt-20 md:my-20 lg:my-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
+          <div className="text-[#04244c]">
             <h1 className="font-[500] text-[16px] sm:mt-10 md:mt-0 p-4 lg:mt-[-40px] sm:text-[22px] xl:text-[35px]">
               مدیریت علمی در فروش و پخش محصولات غذایی شوینده و بهداشتی
             </h1>
@@ -145,11 +144,14 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <div className="my-10 sm:my-56 md:my-20 lg:my-24 bg-gray-800">
-        <h1 className="flex justify-center items-center text-[22px] py-4 px-2 sm:py-6 text-gray-300">
+      <div className="my-10 sm:my-56 md:my-20 lg:my-24 bg-[#04244c]">
+        <div className="flex justify-center items-center">
+        <h1 className="text-[20px] px-2 py-2 my-4 font-[700] text-gray-300">
           برند های تجاری راسا صنعت
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-16 sm:gap-8 lg:gap-3 overflow-x-hidden p-12">
+        </div>
+     
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-16 sm:gap-8 lg:gap-3 overflow-x-hidden p-12 pb-24 lg:p-16 lg:pb-32">
           <motion.div
             className="flex justify-center items-center"
             initial="offscreen"
@@ -175,8 +177,8 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
-      <div className="w-full xl:w-[80%] mx-auto my-10 sm:my-56 md:my-20 lg:my-32">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 overflow-hidden">
+      <div className="my-10 sm:my-56 md:my-20 lg:my-32 bg-sec3-pattern bg-right-top bg-contain">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 overflow-hidden w-full xl:w-[80%] mx-auto">
           <div
             className="p-4"
             // initial="offscreen"
@@ -236,15 +238,15 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full xl:w-[80%] mx-auto px-4 xl:px-0 my-10 sm:my-56 md:my-20 lg:my-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 overflow-x-hidden">
+      <div className="my-10 sm:my-56 md:my-20 lg:my-32 bg-sec4-pattern bg-left-top">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-16 px-4 py-16 overflow-x-hidden w-full xl:w-[80%] mx-auto">
           <div
             className="flex justify-center items-center bg-company"
             // initial="offscreen"
             // whileInView="onscreen"
             // viewport={{ once: true, amount: 0.8 }}
           >
-            <div className="px-8 py-16 lg:p-8 h-full bg-[rgba(0,0,0,0.65)] border-[5px] border-solid border-gray-400 text-white">
+            <div className="px-8 py-16 lg:p-8 h-full bg-[rgba(0,0,0,0.65)] border-[5px] border-solid border-white text-white">
               <h1 className="mb-4 text-[18px]">
                 مدیریت علمی در فروش و پخش محصولات غذایی، شوینده و بهداشتی
               </h1>
@@ -268,7 +270,7 @@ const Home = () => {
               muted
               loop
               autoPlay
-              className="w-full h-full object-cover md:max-h-[400px] lg:max-h-full border-[5px] border-solid border-gray-400"
+              className="w-full h-full object-cover md:max-h-[400px] lg:max-h-full border-[5px] border-solid border-white"
             >
               <source src={present} />
             </video>

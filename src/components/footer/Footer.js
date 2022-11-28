@@ -10,9 +10,9 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="relative border-t p-8 lg:px-16 bg-gray-700 text-gray-300 mt-10 md:mt-32 lg:mt-56">
-      <div className="absolute w-[80%] left-[50%] top-0 translate-x-[-50%] rounded-br-md rounded-bl-md sm:rounded-md sm:translate-y-[-50%] bg-red-500 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
-        <div className="flex flex-col items-center justify-center p-4">
+    <footer className="relative border-t p-8 lg:px-16 bg-[#04244c] text-gray-300 mt-10 md:mt-32 lg:mt-56">
+      <div className="absolute w-[80%] left-[50%] top-0 translate-x-[-50%] rounded-br-md rounded-bl-md sm:rounded-md sm:translate-y-[-50%] bg-[#C70b0d] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+        <div className="flex flex-col items-center justify-center p-4  sm:mb-0">
           <div className="mb-2">
             <BsWatch size={25} />
           </div>
@@ -46,7 +46,7 @@ const Footer = () => {
       </div>
       <div className="max-w-[116rem] mt-96 sm:mt-24 md:mt-12 mx-auto py-[1.5rem]">
         <div className="footer_top">
-          <div className="company_info py-10 sm:py-0 xl:pr-[5rem] flex flex-col justify-center items-center lg:items-stretch lg:justify-start gap-[1.5rem]">
+          <div className="company_info xl:pr-[5rem] flex flex-col justify-center items-center lg:items-stretch lg:justify-start order-last lg:order-first gap-[1.5rem]">
             <div>
               <img src={logo} alt="pakhshoghab" width={195} height={70} />
             </div>
@@ -74,8 +74,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
-          <div className="sm:flex flex-col items-center lg:items-stretch">
+          <div className="sm:flex flex-col items-center lg:items-stretch py-10 sm:py-0">
             <h4 className="mb-6">لینک های مفید</h4>
             <ul className="flex flex-col items-start gap-2 text-[14px]">
               <li className="flex items-center">
@@ -117,7 +116,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="sm:flex flex-col items-center lg:items-stretch">
+          <div className="sm:flex flex-col items-center lg:items-stretch py-10 sm:py-0">
             <h4 className="mb-6">لینک های مفید</h4>
             <ul className="flex flex-col items-start gap-2 text-[14px]">
               <li className="flex items-center">
@@ -143,7 +142,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="sm:flex flex-col items-center lg:items-stretch">
+          <div className="sm:flex flex-col items-center lg:items-stretch py-10 sm:py-0">
             <h4 className="mb-6">لینک های مفید</h4>
             <ul className="flex flex-col items-start gap-2 text-[14px]">
               <li className="flex items-center">

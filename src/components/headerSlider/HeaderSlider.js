@@ -2,8 +2,8 @@ import "./HeaderSlider.css";
 
 const HeaderSlider = () => {
   return (
-    <div className="text-center flex justify-center bg-gray-800">
-      <div className="w-[80rem] h-[40px] bg-transparent text-black overflow-hidden relative">
+    <div className="text-center flex justify-center bg-white">
+      <div className="w-[80rem] h-[40px] bg-transparent text-[#04244c] font-[700] overflow-hidden relative">
         <ul className="scroll-content">
           <li className="flex justify-center items-center ml-14 flex-shrink-0 w-[10rem] max-h-full text-[14px] whitespace-nowrap">
             <p style={{ wordSpacing: "4px" }}>شرکت راسا صنعت یکی از شرکت های</p>
