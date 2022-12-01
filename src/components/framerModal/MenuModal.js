@@ -69,14 +69,14 @@ const MenuModal = ({ modalOpen, handleClose }) => {
         <div className="flex justify-end p-3">
           <button
             type="button"
-            className="bg-[#16161a0a] dark:bg-[#ffffff1a] rounded-[14px] p-2"
+            className="bg-[#16161a0a] rounded-[14px] p-2"
             onClick={handleClose}
           >
             <IoMdClose size={25} />
           </button>
         </div>
         <ul className="pb-3 pt-1 px-8">
-          <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
+          <li className="my-2 text-[#04244c] text-[18px] font-[600] hover:text-black transition-colors ease-linear duration-200">
             <Link
               className="flex items-center py-2"
               to="/"
@@ -89,13 +89,13 @@ const MenuModal = ({ modalOpen, handleClose }) => {
             <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
               <AccordionHeader
                 onClick={() => handleOpen(1)}
-                className="text-gray-400 hover:text-black transition-colors ease-linear duration-200 "
+                className="text-[#04244c] text-[18px] font-inherit hover:text-black transition-colors ease-linear duration-200 "
               >
                 محصولات
               </AccordionHeader>
-              <AccordionBody>
+              <AccordionBody className="font-inherit font-[500]">
                 <ul>
-                  <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
+                  <li className="my-2 text-[#04244c] hover:text-black transition-colors ease-linear duration-200">
                     <Link
                       className="flex items-center p-2"
                       to="/صنایع-غذایی"
@@ -104,7 +104,7 @@ const MenuModal = ({ modalOpen, handleClose }) => {
                       <span className="ml-4">صنایع غذایی</span>
                     </Link>
                   </li>
-                  <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
+                  <li className="my-2 text-[#04244c] hover:text-black transition-colors ease-linear duration-200">
                     <Link
                       className="flex items-center p-2"
                       to="/سلولزی-بهداشتی"
@@ -122,13 +122,13 @@ const MenuModal = ({ modalOpen, handleClose }) => {
             <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
               <AccordionHeader
                 onClick={() => handleOpen(3)}
-                className="text-gray-400 hover:text-black transition-colors ease-linear duration-200"
+                className="text-[#04244c] text-[18px] font-inherit hover:text-black transition-colors ease-linear duration-200"
               >
                 برند های تجاری
               </AccordionHeader>
-              <AccordionBody>
+              <AccordionBody className="font-inherit font-[500]">
                 <ul>
-                  <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
+                  <li className="my-2 text-[#04244c] hover:text-black transition-colors ease-linear duration-200">
                     <Link
                       className="flex items-center p-2"
                       to="/پرسان"
@@ -137,7 +137,7 @@ const MenuModal = ({ modalOpen, handleClose }) => {
                       <span className="ml-4">پرسان</span>
                     </Link>
                   </li>
-                  <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
+                  <li className="my-2 text-[#04244c] hover:text-black transition-colors ease-linear duration-200">
                     <Link
                       className="flex items-center p-2"
                       to="/موسیان"
@@ -155,13 +155,13 @@ const MenuModal = ({ modalOpen, handleClose }) => {
             <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
               <AccordionHeader
                 onClick={() => handleOpen(2)}
-                className="text-gray-400 hover:text-black transition-colors ease-linear duration-200"
+                className="text-[#04244c] text-[18px] font-inherit hover:text-black transition-colors ease-linear duration-200"
               >
                همکاری با ما
               </AccordionHeader>
-              <AccordionBody>
+              <AccordionBody className="font-inherit font-[500]">
                 <ul>
-                  <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
+                  <li className="my-2 text-[#04244c] hover:text-black transition-colors ease-linear duration-200">
                     <Link
                       className="flex items-center p-2"
                       to="/تولید-کنندگان"
@@ -170,7 +170,7 @@ const MenuModal = ({ modalOpen, handleClose }) => {
                       <span className="ml-4">تولید کنندگان</span>
                     </Link>
                   </li>
-                  <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
+                  <li className="my-2 text-[#04244c] hover:text-black transition-colors ease-linear duration-200">
                     <Link
                       className="flex items-center p-2"
                       to="/شرکت-پخش"
@@ -179,7 +179,7 @@ const MenuModal = ({ modalOpen, handleClose }) => {
                       <span className="ml-4">شرکت های پخش</span>
                     </Link>
                   </li>
-                  <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
+                  <li className="my-2 text-[#04244c] hover:text-black transition-colors ease-linear duration-200">
                     <Link
                       className="flex items-center p-2"
                       to="/پرسنل"
@@ -193,16 +193,16 @@ const MenuModal = ({ modalOpen, handleClose }) => {
             </Accordion>
           </li>
 
-          <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
+          <li className="my-2 text-[#04244c] font-[600] hover:text-black transition-colors ease-linear duration-200">
             <Link
-              className="flex items-center py-2"
+              className="flex items-center py-3"
               to="/news"
               onClick={handleClose}
             >
               <span className="ml-4">اخبار و رویدادها</span>
             </Link>
           </li>
-          <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
+          <li className="my-2 text-[#04244c] font-[600] hover:text-black transition-colors ease-linear duration-200">
             <Link
               className="flex items-center py-3"
               to="/about-us"
@@ -211,7 +211,7 @@ const MenuModal = ({ modalOpen, handleClose }) => {
               <span className="ml-4">درباره ما</span>
             </Link>
           </li>
-          <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
+          <li className="my-2 text-[#04244c] font-[600] hover:text-black transition-colors ease-linear duration-200">
             <Link
               className="flex items-center py-3"
               to="/contact-us"
@@ -221,7 +221,7 @@ const MenuModal = ({ modalOpen, handleClose }) => {
             </Link>
           </li>
 
-          <li className="my-2 text-gray-400 hover:text-black transition-colors ease-linear duration-200">
+          <li className="my-2 text-[#04244c] font-[600] hover:text-black transition-colors ease-linear duration-200">
             <Link
               to="/EN"
               className="flex items-center py-3"

@@ -8,7 +8,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { AnimatePresence } from "framer-motion";
 import SearchModal from "./framerModal/SearchModal";
 import MenuModal from "./framerModal/MenuModal";
-import HeaderSlider from "./headerSlider/HeaderSlider";
+import HeaderSlider from "./HeaderSlider";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -6,13 +6,19 @@ import NewsSlider from "./newsCarousel/NewsCarousel";
 import Header from "./Header";
 import parsan from "../images/parsan.png";
 import { motion } from "framer-motion";
-import HeaderSlider from "./headerSlider/HeaderSlider";
-import { Fragment, useState } from "react";
+import HeaderSlider from "./HeaderSlider";
+import { Fragment, useState , useEffect} from "react";
+import { MdOutlineVideoLibrary } from "react-icons/md";
 import ModalVideo from "react-modal-video";
 // import trucks from "../videos/pakhsh.mp4";
 import "../../node_modules/react-modal-video/scss/modal-video.scss";
-import company from "../images/company.png";
-import HonourSlider from "./honourSlider/HonourSlider";
+import c1 from "../images/c1.jpg";
+import c2 from "../images/c2.jpg";
+import c3 from "../images/c3.jpg";
+import c4 from "../images/c4.png";
+import HonourSlider from "./HonourSlider";
+
+const imageArray = [c1, c2, c3, c4];
 
 const Home = () => {
   const firstImgVariants = {
@@ -39,56 +45,28 @@ const Home = () => {
     },
   };
 
-  const secondPartVariants = {
-    offscreen: {
-      opacity: 0,
-      x: 600,
-    },
-    onscreen: {
-      opacity: 1,
-      x: 0,
-      transition: { type: "spring", bounce: 0.4, duration: 0.8 },
-    },
-  };
-
-  const thirdPart1Variants = {
-    offscreen: {
-      opacity: 0,
-      y: -600,
-    },
-    onscreen: {
-      opacity: 1,
-      y: 0,
-      transition: { type: "spring", bounce: 0.4, duration: 0.8 },
-    },
-  };
-
-  const thirdPart2Variants = {
-    offscreen: {
-      opacity: 0,
-      y: 600,
-    },
-    onscreen: {
-      opacity: 1,
-      y: 0,
-      transition: { type: "spring", bounce: 0.4, duration: 0.8 },
-    },
-  };
-
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // const modalOpenHandler = () => {
-  //   setIsModalOpen(!isModalOpen);
-  // };
+  const [count, setCount] = useState(0);
 
-  // const cardTransition = { type: "spring", bounce: 0.4, duration: 0.8 };
+  // Save timer ref and return cleanup function to clear it
+  useEffect(() => {
+    const timerId = setInterval(() => {
+      // Use a functional state update to correctly increment the count
+      setCount((count) => count + 1);
+    }, 3000);
+
+    return () => clearInterval(timerId);
+  }, []);
+
+  const image = imageArray[count % imageArray.length];
 
   return (
     <>
       <HeaderSlider />
       <Header />
-      <div className="p-4 w-full xl:w-[80%] mx-auto my-10 sm:my-56 sm:mt-20 md:my-20 lg:my-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="bg-sec4 bg-right-top bg-cover bg-no-repeat">
+        <div className="w-full xl:w-[80%] mx-auto p-4 py-10 sm:py-56 sm:pt-20 md:py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="text-[#04244c]">
             <h1 className="font-[500] text-[16px] sm:mt-10 md:mt-0 p-4 lg:mt-[-40px] sm:text-[22px] xl:text-[35px]">
               مدیریت علمی در فروش و پخش محصولات غذایی شوینده و بهداشتی
@@ -124,9 +102,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center mt-16">
-          {/* <button onClick={modalOpenHandler}>Play Video </button>
-          <IntroModal open={isModalOpen} toggleModal={modalOpenHandler} /> */}
+        <div className="flex justify-center items-center pb-16">
           <Fragment>
             <ModalVideo
               channel="custom"
@@ -138,12 +114,17 @@ const Home = () => {
             />
           </Fragment>
 
-          <button className="btn-primary" onClick={() => setIsModalOpen(true)}>
-            VIEW DEMO
+          <button
+            className="btn-primary hover:bg-[#04244c] hover:text-gray-300 transition-all duration-200 px-6 py-4 flex justify-between items-center border-[2px] border-solid border-[#04244c] rounded-md"
+            onClick={() => setIsModalOpen(true)}
+          >
+            {/* <MdOutlineVideoLibrary className="ml-3" size={20} color="#C70b0d" /> */}
+            <div className="w-3 h-3 rounded-full ml-2 bg-[#C70b0d] animate-[blink_1s_infinite]"></div>
+            <p>راسا صنعت چگونه کار می کند؟</p>
           </button>
         </div>
       </div>
-      <div className="my-10 sm:my-56 md:my-20 lg:my-24 bg-[#04244c]">
+      <div className="bg-sec8 bg-right-top bg-cover bg-no-repeat">
         <div className="flex justify-center items-center">
           <h1 className="text-[20px] px-2 py-2 my-4 font-[700] text-gray-300">
             برند های تجاری راسا صنعت
@@ -176,19 +157,14 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
-      <div className="my-10 sm:my-56 md:my-20 lg:my-32">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 overflow-hidden w-full xl:w-[80%] mx-auto">
-          <div
-            className="p-4"
-            // initial="offscreen"
-            // whileInView="onscreen"
-            // viewport={{ once: true, amount: 0.8 }}
-          >
-            <div variants={secondPartVariants}>
-              <h1 className="mb-4 text-[18px]">
+      <div className="bg-sec7 bg-right-top-top bg-cover bg-no-repeat">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 overflow-hidden w-full xl:w-[80%] py-20 mx-auto">
+          <div className="p-4 flex justify-center items-center">
+            <div className="text-[#04244c]">
+              <h1 className="mb-4 text-[18px] font-[700]">
                 مدیریت علمی در فروش و پخش محصولات غذایی، شوینده و بهداشتی
               </h1>
-              <p className="text-[14px] leading-6 text-justify">
+              <p className="text-[14px] leading-6 font-[500] text-justify">
                 رمز موفقیت در بازار پرتلاطم امروز به‌کارگیری فنون مدیریت علمی در
                 بازار است، شرکت پخش عقاب با این رویکرد به یکی از معتبرترین
                 شرکت‌های پخش در کشور بدل ساخته‌است. پخش عقاب موفقیت خود را مدیون
@@ -203,49 +179,29 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div
-            className="grid grid-cols-2 p-4 gap-4 aspect-square"
-            // initial="offscreen"
-            // whileInView="onscreen"
-            // viewport={{ once: true, amount: 0.8 }}
-          >
+          <div className="grid grid-cols-2 p-4 gap-4 aspect-square">
             <div>
               <img
-                src={company}
+                src={image}
                 className="w-full h-full rounded-md object-cover"
               />
             </div>
-            <div variants={thirdPart1Variants}>
-              <img
-                src={company}
-                className="w-full h-full rounded-md object-cover"
-              />
+            <div>
+              <img src={c4} className="w-full h-full rounded-md object-cover" />
             </div>
-            <div variants={thirdPart2Variants}>
-              <img
-                src={company}
-                className="w-full h-full rounded-md object-cover"
-              />
+            <div>
+              <img src={c4} className="w-full h-full rounded-md object-cover" />
             </div>
-            <div variants={thirdPart2Variants}>
-              <img
-                src={company}
-                className="w-full h-full rounded-md object-cover"
-              />
+            <div>
+              <img src={c4} className="w-full h-full rounded-md object-cover" />
             </div>
           </div>
         </div>
       </div>
-
-      <div className="my-10 sm:my-56 md:my-20 lg:my-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-16 px-4 py-16 overflow-x-hidden w-full xl:w-[80%] mx-auto">
-          <div
-            className="flex justify-center items-center bg-company"
-            // initial="offscreen"
-            // whileInView="onscreen"
-            // viewport={{ once: true, amount: 0.8 }}
-          >
-            <div className="px-8 py-16 lg:p-8 h-full bg-[rgba(0,0,0,0.65)] border-[5px] border-solid border-white text-white">
+      <div className="bg-sec9 bg-right-top bg-cover bg-no-repeat">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-16 px-4 py-20 overflow-x-hidden w-full xl:w-[80%] mx-auto">
+          <div className="flex justify-center items-center bg-company">
+            <div className="px-8 py-16 lg:p-8 h-full bg-[rgba(0,0,0,0.65)] border-[3px] border-solid border-white text-white">
               <h1 className="mb-4 text-[18px]">
                 مدیریت علمی در فروش و پخش محصولات غذایی، شوینده و بهداشتی
               </h1>
@@ -269,7 +225,7 @@ const Home = () => {
               muted
               loop
               autoPlay
-              className="w-full h-full object-cover md:max-h-[400px] lg:max-h-full border-[5px] border-solid border-white"
+              className="w-full h-full object-cover md:max-h-[400px] lg:max-h-full border-[3px] border-solid border-white"
             >
               <source src={present} />
             </video>
@@ -277,7 +233,7 @@ const Home = () => {
         </div>
       </div>
       <div className="w-full xl:w-[80%] mx-auto my-10 sm:my-56 md:my-20 lg:my-32">
-        <h1 className="flex justify-center items-center text-[22px] mt-20 mb-4">
+        <h1 className="flex justify-center items-center text-[22px] text-[#04244c] mt-20 mb-4">
           آخرین اخبار و رویدادهای ما
         </h1>
         <NewsSlider />
