@@ -7,7 +7,7 @@ import Header from "./Header";
 import parsan from "../images/parsan.png";
 import { motion } from "framer-motion";
 import HeaderSlider from "./HeaderSlider";
-import { Fragment, useState , useEffect} from "react";
+import { Fragment, useState, useEffect } from "react";
 import { MdOutlineVideoLibrary } from "react-icons/md";
 import ModalVideo from "react-modal-video";
 // import trucks from "../videos/pakhsh.mp4";
@@ -24,24 +24,24 @@ const Home = () => {
   const firstImgVariants = {
     offscreen: {
       opacity: 0,
-      x: 100,
+      x: "90vw",
     },
     onscreen: {
       opacity: 1,
       x: 0,
-      transition: { type: "spring", bounce: 0.4, duration: 0.8 },
+      transition: { type: "spring", duration: 0.8 },
     },
   };
 
   const secondImgVariants = {
     offscreen: {
       opacity: 0,
-      x: -100,
+      x: "-90vw",
     },
     onscreen: {
       opacity: 1,
       x: 0,
-      transition: { type: "spring", bounce: 0.4, duration: 0.8 },
+      transition: { type: "spring", duration: 0.8 },
     },
   };
 
@@ -65,7 +65,7 @@ const Home = () => {
     <>
       <HeaderSlider />
       <Header />
-      <div className="bg-sec4 bg-right-top bg-cover bg-no-repeat">
+      <div className="bg-sec1 bg-right-top bg-cover bg-no-repeat">
         <div className="w-full xl:w-[80%] mx-auto p-4 py-10 sm:py-56 sm:pt-20 md:py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="text-[#04244c]">
             <h1 className="font-[500] text-[16px] sm:mt-10 md:mt-0 p-4 lg:mt-[-40px] sm:text-[22px] xl:text-[35px]">
@@ -124,7 +124,7 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <div className="bg-sec8 bg-right-top bg-cover bg-no-repeat">
+      <div className="bg-sec2 bg-right-top bg-cover bg-no-repeat">
         <div className="flex justify-center items-center">
           <h1 className="text-[20px] px-2 py-2 my-4 font-[700] text-gray-300">
             برند های تجاری راسا صنعت
@@ -157,10 +157,10 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
-      <div className="bg-sec7 bg-right-top-top bg-cover bg-no-repeat">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 overflow-hidden w-full xl:w-[80%] py-20 mx-auto">
+      <div className="bg-sec3 bg-right-top-top bg-cover bg-no-repeat">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 overflow-hidden w-full xl:w-[80%] overflow-x-hidden py-20 mx-auto">
           <div className="p-4 flex justify-center items-center">
-            <div className="text-[#04244c]">
+            <div variants={firstImgVariants} className="text-[#04244c]">
               <h1 className="mb-4 text-[18px] font-[700]">
                 مدیریت علمی در فروش و پخش محصولات غذایی، شوینده و بهداشتی
               </h1>
@@ -198,38 +198,56 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="bg-sec9 bg-right-top bg-cover bg-no-repeat">
+      <div className="bg-sec4 bg-right-top bg-cover bg-no-repeat">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-16 px-4 py-20 overflow-x-hidden w-full xl:w-[80%] mx-auto">
-          <div className="flex justify-center items-center bg-company">
-            <div className="px-8 py-16 lg:p-8 h-full bg-[rgba(0,0,0,0.65)] border-[3px] border-solid border-white text-white">
-              <h1 className="mb-4 text-[18px]">
-                مدیریت علمی در فروش و پخش محصولات غذایی، شوینده و بهداشتی
-              </h1>
-              <p className="text-[14px] leading-6 text-justify">
-                رمز موفقیت در بازار پرتلاطم امروز به‌کارگیری فنون مدیریت علمی در
-                بازار است، شرکت پخش عقاب با این رویکرد به یکی از معتبرترین
-                شرکت‌های پخش در کشور بدل ساخته‌است. پخش عقاب موفقیت خود را مدیون
-                پیروی و ساختار پذیری از برنامه‌های استراتژیک و برنامه‌ریزی درست
-                و تعهد به اجرای صحیح آن‌ها است. این شرکت، هرساله با جمع‌آوری
-                اطلاعات بازار و داده‌های خود، عملکرد خویش را به‌صورت مستمر
-                ارزیابی کرده و با تعیین اهداف در بازه های زمانی کوتاه، میانه و
-                بلند‌ برنامه‌های استراتژیک خود را برای تحقق این اهداف تدوین و
-                پیاده‌سازی می‌کند. این شرکت هم اکنون از این طریق، با ارائه خدمات
-                دقیق، علمی و منحصربه‌فرد موفق به جلب اعتماد و رضایت مشتریان شده
-                و به جایگاهی درخشان در صنعت پخش و توزیع کشور دست‌یافته است.
-              </p>
-            </div>
-          </div>
-          <div className="flex justify-center items-center">
-            <video
+          <motion.div
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.8 }}
+            className="flex justify-center"
+          >
+            <motion.div
+              variants={firstImgVariants}
+              className="flex justify-center items-center bg-company"
+            >
+              <div className="px-8 py-16 lg:p-8 h-full bg-[rgba(0,0,0,0.65)] border-[3px] border-solid border-white text-white">
+                <h1 className="mb-4 text-[18px]">
+                  مدیریت علمی در فروش و پخش محصولات غذایی، شوینده و بهداشتی
+                </h1>
+                <p className="text-[14px] leading-6 text-justify">
+                  رمز موفقیت در بازار پرتلاطم امروز به‌کارگیری فنون مدیریت علمی
+                  در بازار است، شرکت پخش عقاب با این رویکرد به یکی از معتبرترین
+                  شرکت‌های پخش در کشور بدل ساخته‌است. پخش عقاب موفقیت خود را
+                  مدیون پیروی و ساختار پذیری از برنامه‌های استراتژیک و
+                  برنامه‌ریزی درست و تعهد به اجرای صحیح آن‌ها است. این شرکت،
+                  هرساله با جمع‌آوری اطلاعات بازار و داده‌های خود، عملکرد خویش
+                  را به‌صورت مستمر ارزیابی کرده و با تعیین اهداف در بازه های
+                  زمانی کوتاه، میانه و بلند‌ برنامه‌های استراتژیک خود را برای
+                  تحقق این اهداف تدوین و پیاده‌سازی می‌کند. این شرکت هم اکنون از
+                  این طریق، با ارائه خدمات دقیق، علمی و منحصربه‌فرد موفق به جلب
+                  اعتماد و رضایت مشتریان شده و به جایگاهی درخشان در صنعت پخش و
+                  توزیع کشور دست‌یافته است.
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.8 }}
+            className="flex justify-center items-center"
+          >
+            <motion.video
               muted
               loop
               autoPlay
               className="w-full h-full object-cover md:max-h-[400px] lg:max-h-full border-[3px] border-solid border-white"
+              variants={secondImgVariants}
             >
               <source src={present} />
-            </video>
-          </div>
+            </motion.video>
+          </motion.div>
         </div>
       </div>
       <div className="w-full xl:w-[80%] mx-auto my-10 sm:my-56 md:my-20 lg:my-32">
